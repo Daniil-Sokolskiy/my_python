@@ -16,8 +16,8 @@ def types(s, d):
 
 
 string = input("Введите элементы через пробел: ")
-my_list = list(types(string, " "))
-print(my_list)
+lst = list(types(string, " "))
+print(lst)
 
-for element in my_list:
-    print(f'{element} = {type(element)}')
+for el in lst:
+    print(type(el))

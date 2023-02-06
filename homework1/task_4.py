@@ -9,6 +9,12 @@
 revenue = int(input("Введите выручку фирмы: "))
 costs = int(input("Введите издержки фирмы: "))
 print(f"прибыль фирмы: {revenue-costs}")
-print(f"Рентабельность выручки: {(revenue-costs)/revenue}")
-numbers = int(input("Введите численность сотрудников: "))
-print(f"Прибыль фирмы в расчёте на 1 сотрудника: {(revenue-costs)/numbers}")
+if revenue > costs:
+    print("Фирма работает в прибыль")
+    print(f"Рентабельность выручки: {(revenue-costs)/revenue}")
+    numbers = int(input("Введите численность сотрудников: "))
+    print(f"Прибыль фирмы в расчёте на 1 сотрудника: {(revenue-costs)/numbers}")
+elif revenue == costs:
+    print('Прибыль фирмы равна ее убыткам')
+else:
+    print('Фирма работает в убыток')
