@@ -1,0 +1,19 @@
+# Написать метод/функцию, который/которая на вход принимает массив городов.
+# В качестве результата возвращает строку, где города разделены запятыми,
+# а в конце стоит точка.
+# Пример:
+# «Москва, Санкт-Петербург, Воронеж.»
+# 5-7 минут
+
+
+def towns():
+    cities = []
+    while True:
+        city = input("Enter text city or press enter to finish: ")
+        if not city:
+            break
+        cities.append(city)
+    print(', '.join(cities) + '.')
+
+
+towns()
