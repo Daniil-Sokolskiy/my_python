@@ -5,14 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8854ca9-f835-471f-8d9c-ffadf214d6c4" name="Changes" comment="check">
-      <change afterPath="$PROJECT_DIR$/homework4/multinomial.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework4/multinomial2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework4/sum_multinomial.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework4/task1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework4/task2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework4/task3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework4/task4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework4/task5.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -245,16 +237,5 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="check" />
     <option name="LAST_COMMIT_MESSAGE" value="check" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/homework4/task5.py</url>
-          <line>22</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
