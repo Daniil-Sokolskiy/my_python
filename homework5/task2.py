@@ -16,7 +16,8 @@
 """
 
 
-def count_even_odd(n, ev, od):
+def count_even_odd(n):
+    ev = od = 0
     if n == 0:
         return print(f"Count of even: {ev}, count of odd: {od}")
     last_num = n % 10
@@ -24,9 +25,9 @@ def count_even_odd(n, ev, od):
         ev += 1
     else:
         od += 1
-    count_even_odd(n//10, ev, od)
+    count_even_odd(n//10)
 
 
 num = int(input("Enter a number: "))
 even = odd = 0
-count_even_odd(num, even, odd)
+count_even_odd(num)
