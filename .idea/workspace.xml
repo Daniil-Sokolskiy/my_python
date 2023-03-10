@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8854ca9-f835-471f-8d9c-ffadf214d6c4" name="Changes" comment="check">
-      <change afterPath="$PROJECT_DIR$/homework7/task1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework7/task2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework7/task3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework7/task4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework7/task5.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework7/task2.py" beforeDir="false" afterPath="$PROJECT_DIR$/homework7/task2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework7/task4.py" beforeDir="false" afterPath="$PROJECT_DIR$/homework7/task4.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +57,7 @@
       <recent name="D:\Geek\питон\python projects\homework1" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.task5">
+  <component name="RunManager" selected="Python.task4">
     <configuration name="task1 (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -189,8 +186,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.task5" />
         <item itemvalue="Python.task4" />
+        <item itemvalue="Python.task5" />
         <item itemvalue="Python.task3" />
         <item itemvalue="Python.task2 (1)" />
         <item itemvalue="Python.task1 (2)" />

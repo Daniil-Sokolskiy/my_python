@@ -39,18 +39,13 @@ class Matrix:
                          for x in self.matr_list)
 
     def __add__(self, other):
-        matr = [[0, 0, 0],
-                [0, 0, 0],
-                [0, 0, 0]]
-
-        for i in range(len(self.matr_list)):
-            for j in range(len(other.matr_list[i])):
-                matr[i][j] = self.matr_list[i][j] + other.matr_list[i][j]
-
-        return str('\n'.join(['\t'.join([str(j) for j in i]) for i in matr]))
+        return Matrix(list(map(
+            lambda x, y: list(map(lambda z, w: z + w, x, y)),
+            self.matr_list, other.matr_list)))
 
 
 matr1 = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
 matr2 = Matrix([[11, 12, 13], [14, 15, 16], [17, 18, 19]])
+print(matr2)
 matr = matr1 + matr2
-print(matr)  # matr not Matrix!!!
+print(matr)

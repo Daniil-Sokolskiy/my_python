@@ -21,16 +21,14 @@ length (длина в метрах), width (ширина в метрах).
 class road:
     _length = 20
     _width = 5000
-    mass = None
-    fatness = None
 
     def __init__(self, new_mass, new_fatness):
         self.mass = new_mass
         self.fatness = new_fatness
 
     def total_mass(self):
-        total = self._length*self._width*self.mass*self.fatness
-        return print(f'{total/1000} тонн')
+        total = self._length * self._width * self.mass * self.fatness
+        return print(f'{total / 1000} тонн')
 
 
 central_road = road(25, 0.05)
