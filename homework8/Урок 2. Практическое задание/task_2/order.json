@@ -1,0 +1,25 @@
+{
+    "orders": [
+        {
+            "item": "printer",
+            "quantity": "10",
+            "price": "6700",
+            "buyer": "ivanov",
+            "date": "today"
+        },
+        {
+            "item": "pc",
+            "quantity": "12",
+            "price": "226700",
+            "buyer": "divanov",
+            "date": "21.11.22"
+        },
+        {
+            "item": "phone",
+            "quantity": "121",
+            "price": "96900",
+            "buyer": "parov",
+            "date": "12.01.22"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+items:
+- computer
+- phone
+- table
+- keyboard
+items-price:
+  computer: 20000 U+20AC
+  keyboard: 100 U+20AC
+  phone: 400 U+20AC
+  table: 50 U+20AC
+items-quantity: 100
