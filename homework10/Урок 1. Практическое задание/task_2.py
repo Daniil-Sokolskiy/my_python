@@ -10,3 +10,11 @@
 --- b'class' - используйте маркировку b''
 --- используйте списки и циклы, не дублируйте функции
 """
+
+
+mess = ['class', 'function', 'method']
+
+for word in mess:
+    b_word = bytes(word, encoding='utf-8')
+    print(f'{word} - {len(word)} - {type(word)}\n'
+          f'{b_word} - {len(b_word)} - {type(b_word)}')
