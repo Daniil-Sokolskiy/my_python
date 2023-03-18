@@ -19,36 +19,68 @@ str(self) - вызывается функциями str, print и format.
 """
 
 
+class Singleton(type):
+    _instances = {}
+
+    def __call__(cls, *args, **kwargs):
+        if cls not in cls._instances:
+            cls._instances[cls] = super().__call__(*args, **kwargs)
+        return cls._instances[cls]
+
+
+class IsString:
+    def __set__(self, instance, value):
+        if type(value) != str:
+            raise TypeError(f'The {self.my_attr} must be a string!')
+        instance.__dict__[self.my_attr] = value
+
+    def __set_name__(self, owner, my_attr):
+        self.my_attr = my_attr
+
+
+class NonNegative:
+    def __set__(self, instance, value):
+        if type(value) not in (int, float):
+            raise TypeError(f'The {self.my_attr} must be a number!')
+        elif value < 0:
+            raise ValueError(f'The {self.my_attr} '
+                             f'must be a non-negative number!')
+        instance.__dict__[self.my_attr] = value
+
+    def __set_name__(self, owner, my_attr):
+        self.my_attr = my_attr
+
+
 class Worker:
-    name = "name"
-    surname = "surname"
-    position = "position"
-    _income = "{'wage': wage, 'bonus': bonus}"
+    name = IsString()
+    surname = IsString()
+    wage = NonNegative()
+    bonus = NonNegative()
 
-    def __init__(self, new_name, new_surname, new_position, wage, bonus):
-        self.name = new_name
-        self.surname = new_surname
-        self.position = new_position
-        self._income = {'wage': wage, 'bonus': bonus}
-
-    def __str__(self):
-        return f'Сотрудник: {self.name} {self.surname}, {self.position}, ' \
-               f'{self._income["wage"]+self._income["bonus"]}'
+    def __init__(self, name, surname, position, wage, bonus):
+        self.name = name
+        self.surname = surname
+        self.position = position
+        self.wage = wage
+        self.bonus = bonus
+        self._income = {"wage": wage, "bonus": bonus}
 
 
-class Position(Worker):
-
+class Position(Worker, metaclass=Singleton):
     def get_full_name(self):
-        print(self.name, self.surname)
+        return f'{self.name} {self.surname}'
 
     def get_total_income(self):
-        print(f'{self.name[:1]}.{self.surname} - {self._income}')
+        return self.wage + self.bonus
+
+    def __str__(self):
+        return f"Position: {self.position}\n"\
+               f"Name: {self.get_full_name()}\nSalary: " \
+               f"{self.get_total_income()}\n"
 
 
-position_1 = Position("namee", "suurname", "pos", 5000, 1000)
-position_2 = Position("nameeeee", "suuuuurname", "pooos", 10000, 2000)
-
-position_1.get_full_name()
-position_2.get_total_income()
-
-print(position_1)
+obj1 = Position("name", "surname", "chief", 100000, 30000)
+obj2 = Position("name", "surname", "chief", 100000, 20000)
+print(obj1 is obj2)
+print(obj1)
+print(obj2)
